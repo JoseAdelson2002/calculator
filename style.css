@@ -18,6 +18,7 @@ body {
 button {
   background: none;
   border: none;
+  font-size: 1.5rem;
 }
 
 button:hover {
@@ -29,9 +30,9 @@ button:hover {
   background-color: black;
   grid-template-columns: repeat(4, 1fr);
   height: 50%;
-  min-height: 200px;
-  width: 50%;
-  min-width: 200px;
+  min-height: 500px;
+  width: auto;
+  min-width: 300px;
   grid-auto-rows: 1fr;
   grid-template-areas:
     "result-box result-box result-box result-box"
@@ -51,14 +52,25 @@ button:hover {
 }
 
 .result-box {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background-color: #222222;
   grid-area: result-box;
   width: 100%;
-  justify-content: end;
-  align-items: end;
+  justify-content: space-around;
+  align-items: flex-end;
   padding-right: 10px;
   padding-bottom: 5px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.result-box > .previous-operand {
+  font-size: 1.5rem;
+}
+
+.result-box > .current-operand {
+  font-size: 2.5rem;
 }
 
 .ac-del-box {
