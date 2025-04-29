@@ -15,6 +15,15 @@ body {
   justify-content: center;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .main-container {
   display: grid;
   background-color: black;
@@ -37,7 +46,7 @@ body {
   cursor: pointer;
 }
 
-.main-container > div > div > p {
+.main-container > div > div > button {
   font-weight: 500;
 }
 
@@ -70,7 +79,7 @@ body {
   background-color: #fff;
 }
 
-.ac-del-box > div:hover > p {
+.ac-del-box > div:hover > button {
   color: black;
 }
 
@@ -98,7 +107,7 @@ body {
   background-color: #fff;
 }
 
-.numbers-box > div:hover > p {
+.numbers-box > div:hover > button {
   color: black;
 }
 
@@ -121,6 +130,6 @@ body {
   background-color: #fff;
 }
 
-.operators-box > div:hover > p {
+.operators-box > div:hover > button {
   color: black;
 }
