@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, #223328 0%, #40b782 100%);
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  display: grid;
+  background-color: black;
+  grid-template-columns: repeat(4, 1fr);
+  height: 50%;
+  min-height: 200px;
+  width: 50%;
+  min-width: 200px;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "result-box result-box result-box result-box"
+    "ac-del-box ac-del-box ac-del-box operators-box"
+    "numbers-box numbers-box numbers-box operators-box"
+    "numbers-box numbers-box numbers-box operators-box"
+    "numbers-box numbers-box numbers-box operators-box"
+    "numbers-box numbers-box numbers-box operators-box";
+}
+
+.main-container > div:not(.result-box):hover {
+  cursor: pointer;
+}
+
+.main-container > div > div > p {
+  font-weight: 500;
+}
+
+.result-box {
+  display: grid;
+  background-color: #222222;
+  grid-area: result-box;
+  width: 100%;
+  justify-content: end;
+  align-items: end;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.ac-del-box {
+  display: grid;
+  grid-area: ac-del-box;
+  grid-template-areas: "ac-box ac-box del-box";
+}
+
+.ac-del-box > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ac-del-box > div:hover {
+  background-color: #fff;
+}
+
+.ac-del-box > div:hover > p {
+  color: black;
+}
+
+.numbers-box {
+  display: grid;
+  grid-area: numbers-box;
+  align-items: center;
+  grid-template-areas:
+    "number1-box number2-box number3-box"
+    "number4-box number5-box number6-box"
+    "number7-box number8-box number9-box"
+    "point-box point-box number0-box";
+}
+
+.numbers-box > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numbers-box > div:hover {
+  background-color: #fff;
+}
+
+.numbers-box > div:hover > p {
+  color: black;
+}
+
+.operators-box {
+  display: grid;
+  grid-area: operators-box;
+  background-color: #3a9a6f;
+  grid-template-areas:
+    "division-box"
+    "mult-box"
+    "add-box"
+    "sub-box"
+    "equal-box";
+}
+
+.operators-box > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.operators-box > div:hover {
+  background-color: #fff;
+}
+
+.operators-box > div:hover > p {
+  color: black;
+}
+
+.ac-box {
+  grid-area: ac-box;
+  justify-self: center;
+}
+
+.del-box {
+  grid-area: del-box;
+  justify-self: center;
+}
+
+.division-box {
+  grid-area: division-box;
+}
+
+.number1-box {
+  grid-area: number1-box;
+}
+
+.number2-box {
+  grid-area: number2-box;
+}
+
+.number3-box {
+  grid-area: number3-box;
+}
+
+.number4-box {
+  grid-area: number4-box;
+}
+
+.number5-box {
+  grid-area: number5-box;
+}
+
+.number6-box {
+  grid-area: number6-box;
+}
+
+.number7-box {
+  grid-area: number7-box;
+}
+
+.number8-box {
+  grid-area: number8-box;
+}
+
+.number9-box {
+  grid-area: number9-box;
+}
+
+.number0-box {
+  grid-area: number0-box;
+}
+
+.point-box {
+  grid-area: point-box;
+  justify-self: center;
+}
+
+.mult-box {
+  grid-area: mult-box;
+}
+
+.add-box {
+  grid-area: add-box;
+}
+
+.sub-box {
+  grid-area: sub-box;
+}
+
+.equal-box {
+  grid-area: equal-box;
+  width: 100%;
+}
