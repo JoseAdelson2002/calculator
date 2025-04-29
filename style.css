@@ -55,7 +55,7 @@ body {
 .ac-del-box {
   display: grid;
   grid-area: ac-del-box;
-  grid-template-areas: "ac-box ac-box del-box";
+  grid-template-columns: 2fr 1fr;
 }
 
 .ac-del-box > div {
@@ -78,11 +78,12 @@ body {
   display: grid;
   grid-area: numbers-box;
   align-items: center;
-  grid-template-areas:
-    "number1-box number2-box number3-box"
-    "number4-box number5-box number6-box"
-    "number7-box number8-box number9-box"
-    "point-box point-box number0-box";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.point-box {
+  grid-column: 1/3;
 }
 
 .numbers-box > div {
@@ -105,12 +106,7 @@ body {
   display: grid;
   grid-area: operators-box;
   background-color: #3a9a6f;
-  grid-template-areas:
-    "division-box"
-    "mult-box"
-    "add-box"
-    "sub-box"
-    "equal-box";
+  grid-template-rows: repeat(5, 1fr);
 }
 
 .operators-box > div {
@@ -127,80 +123,4 @@ body {
 
 .operators-box > div:hover > p {
   color: black;
-}
-
-.ac-box {
-  grid-area: ac-box;
-  justify-self: center;
-}
-
-.del-box {
-  grid-area: del-box;
-  justify-self: center;
-}
-
-.division-box {
-  grid-area: division-box;
-}
-
-.number1-box {
-  grid-area: number1-box;
-}
-
-.number2-box {
-  grid-area: number2-box;
-}
-
-.number3-box {
-  grid-area: number3-box;
-}
-
-.number4-box {
-  grid-area: number4-box;
-}
-
-.number5-box {
-  grid-area: number5-box;
-}
-
-.number6-box {
-  grid-area: number6-box;
-}
-
-.number7-box {
-  grid-area: number7-box;
-}
-
-.number8-box {
-  grid-area: number8-box;
-}
-
-.number9-box {
-  grid-area: number9-box;
-}
-
-.number0-box {
-  grid-area: number0-box;
-}
-
-.point-box {
-  grid-area: point-box;
-  justify-self: center;
-}
-
-.mult-box {
-  grid-area: mult-box;
-}
-
-.add-box {
-  grid-area: add-box;
-}
-
-.sub-box {
-  grid-area: sub-box;
-}
-
-.equal-box {
-  grid-area: equal-box;
-  width: 100%;
 }
